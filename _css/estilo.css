@@ -13,7 +13,7 @@ body {
 }
 
 div#interface {
-    width: 900px;
+    width: 1000px;
     background-color: #ffffff;
     margin: -20px auto 0px auto;
     box-shadow: 0px 0px 10px rgba(0,0,0,.5);
@@ -30,11 +30,11 @@ p {
 header#cabecalho img#icone {
     position: absolute;
     top: 70px;
-    left: 950px;
+    left: 1000px;
 }
 
 header#cabecalho {
-    border-bottom: 1px #606060 solid;
+    border-bottom: 1px solid #606060;
     height: 150px;
     background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
 }
@@ -98,7 +98,7 @@ nav#menu ul {
     text-transform: uppercase;
     position: absolute;
     top: -20px;
-    left: 430px;
+    left: 475px;
 }
 
 nav#menu li {
@@ -125,4 +125,33 @@ nav#menu a {
 nav#menu a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+/*
+    section = sessão
+    aside = conteúdo lateral
+    footer = rodapé
+*/
+
+section#corpo {
+    display: block;
+    width: 575px;
+    float: left;
+    border-right: 1px solid #606060;
+    padding-right: 25px;
+}
+
+aside#lateral {
+    display: block;
+    width: 375px;
+    float: right;
+}
+
+footer#rodape {
+    clear: both;
+    border-top: 1px solid #606060;
+}
+
+footer#rodape p {
+    text-align: center;
 }
