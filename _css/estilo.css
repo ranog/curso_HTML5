@@ -153,6 +153,34 @@ table#tabela_spec td {
     padding: 10px;
 }
 
+table#tabela_spec td.col_esquerda {
+    color: #ffffff;
+    background-color: #606060;
+    vertical-align: top;
+    font-weight: bold;
+    text-align: right;
+
+}
+
+table#tabela_spec td.col_direita {
+    background-color: #cecece;
+    text-align: left;
+}
+
+table#tabela_spec caption {
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bolder;
+}
+
+table#tabela_spec caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 8pt;
+    margin-top: 10px;
+}
+
 aside#lateral {
     display: block;
     width: 375px;
