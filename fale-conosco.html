@@ -54,28 +54,28 @@
                 </hgroup>
             </header>
 
-            <form>
+
+            <!--
+                get = rápido/menos seguro 
+                post = lento/mais seguro
+            -->
+
+            <form method="post" id="formulario_contato" action="mailto:endereco@email.com.br">
                 <fieldset id="usuario">
                     <legend>Identificação do Usuário</legend>
 
                     <p>
-                        <label for="campo_nome">
-                            Nome:
-                        </label>
+                        <label for="campo_nome">Nome:</label>
                         <input type="text" name="texto_nome" id="campo_nome" size="20" maxlength="30" placeholder="Nome completo"/>
                     </p>
 
                     <p>
-                        <label for="campo_senha">
-                            Senha:
-                        </label>
+                        <label for="campo_senha">Senha:</label>
                         <input type="password" name="texto_senha" id="campo_senha" size="8" maxlength="8" placeholder="8 dígitos"/>
                     </p>
 
                     <p>
-                        <label for="campo_email">
-                            E-mail:
-                        </label> 
+                        <label for="campo_email">E-mail:</label> 
                         <input type="email" name="texto_email" id="campo_email" size="20" maxlength="40">
                     </p>
                 
@@ -86,21 +86,15 @@
                         <!--
                             checked - para deixar marcado uma opção, colocar logo depois do ID.
                         -->
-                            <label for="campo_masculino">
-                                Masculino
-                            </label>
+                        <label for="campo_masculino">Masculino</label>
                         <br/>
                         <input type="radio" name="texto_sexo" id="campo_feminino"/>
-                            <label for="campo_feminino">
-                                Feminino
-                            </label>
+                        <label for="campo_feminino">Feminino</label>
 
                     </fieldset>
 
                     <p>
-                        <label for="campo_data">
-                            Data de Nascimento:
-                        </label> 
+                        <label for="campo_data">Data de Nascimento:</label> 
                         <input type="date"name="texto_data" id="campo_data"/>
                     </p>
                 </fieldset>
@@ -108,31 +102,66 @@
                 <fieldset id="endereco">
                     <legend>Endereço do Usuário</legend>
                     <p>
-                        <label for="campo_logradouro">
-                            Logradouro:
-                        </label>
+                        <label for="campo_logradouro">Logradouro:</label>
                         <input type="text" name="texte_logradouro" id="campo_logradouro" size="13" maxlength="80" placeholder="Av, Rua, Travessa, ..."/>
                     </p>
     
                     <p>
-                        <label for="campo_numero">
-                            Número:
-                        </label>
+                        <label for="campo_numero">Número:</label>
                         <input type="number" name="texte_numero" id="campo_numero" min="0" max="999999"/>
                     </p>
-    Estado:
-    Cidade:
+
+                    <p>
+                        <label for="campo_estado">Estado:</label>
+                        <select name="texto_estado" id="campo_estado">
+                            <optgroup label="Região Sudeste">
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="SP" selected>São Paulo</option> <!--tornar a opção padrão-->
+                                <option value="MG">Minas Gerais</option>
+                            </optgroup>
+
+                            <optgroup label="Região Sul">
+                                <option value="PR">Paraná</option>
+                                <option value="SC">Santa Catariona</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                            </optgroup>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="campo_cidade">Cidade:</label>
+                        <input type="text" name="texto_cidade" id="campo_cidade" maxlength="40" size="20" placeholder="Sua cidade" list="cidades">
+                    </p>
+
+                    <datalist id="cidades">
+                        <option value="Rio de Janeiro"></option>
+                        <option value="Nova Iguaçu"></option>
+                        <option value="Niterói"></option>
+                        <option value= "Belford Roxo"></option>
+                    </datalist>
+
                 </fieldset>
 
                 <fieldset id="mensagem">
                     <legend>Mensagem do Usuário</legend>
-    Grau de Urgência:
-    Mensagem:
+
+                    <p>
+                        <label for="campo_urgencia">Grau de Urgência:</label>
+                        Mín<input type="range" name="texto_urgencia" id="campo_urgencia" min="0" max="10" step="2">Máx
+                    </p>
+
+                    <p>
+                        <label for="campo_mensagem">Mensagem:</label>
+                        <textarea name="texto_mensagem" id="campo_mensagem" cols="45" rows="5" placeholder="Deixe sua mensagem aqui."></textarea>
+                    </p>
 
                 </fieldset>
 
                 <fieldset id="pedido">
                     <legend>Quero um Google Glass</legend>
+
+                    <p>
+                        <label for="">
     Gostaria de adquirir um Google Glass quando disponível
     Cor:
     Quantidade:
