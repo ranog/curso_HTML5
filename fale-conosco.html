@@ -12,6 +12,14 @@
         -->
     <link rel="stylesheet" href="_css/estilo.css"/>
     <link rel="stylesheet" href="_css/contato.css">
+    <script src="_javascript/funcoes.js"></script>
+    <script>
+        function calcular_total(){
+            var quantidade = parseInt(document.getElementById('campo_quantidade').value);
+            total = quantidade * 1500;
+            document.getElementById('campo_total').value = total;
+        }
+    </script>
 </head>
 
 <script src="_javascript/funcoes.js"></script>
@@ -60,7 +68,7 @@
                 post = lento/mais seguro
             -->
 
-            <form method="post" id="formulario_contato" action="mailto:endereco@email.com.br">
+            <form method="post" id="formulario_contato" action="mailto:endereco@email.com.br" oninput=" calcular_total();">
                 <fieldset id="usuario">
                     <legend>Identificação do Usuário</legend>
 
@@ -152,7 +160,7 @@
 
                     <p>
                         <label for="campo_mensagem">Mensagem:</label>
-                        <textarea name="texto_mensagem" id="campo_mensagem" cols="45" rows="5" placeholder="Deixe sua mensagem aqui."></textarea>
+                        <textarea name="texto_mensagem" id="campo_mensagem" cols="35" rows="5" placeholder="Deixe sua mensagem aqui."></textarea>
                     </p>
 
                 </fieldset>
@@ -161,15 +169,31 @@
                     <legend>Quero um Google Glass</legend>
 
                     <p>
-                        <label for="">
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+                        <input type="checkbox" name="texto_pedido" id="campo_pedido" checked>
+                        <label for="campo_pedido">Gostaria de adquirir um Google Glass quando disponível</label>
+                    </p>
+
+                    <p>
+                        <label for="campo_cor">Cor:</label>
+                        <input type="color" name="texto_cor" id="campo_cor" value="#0000ff">
+                    </p>
+
+                    <p>
+                        <label for="campo_quantidade">Quantidade:</label>
+                        <input type="number" name="texto_quantidade" id="campo_quantidade" min="0" max="5" value="0">
+                    </p>
+
+                    <p>
+                        <label for="campo_total">Preço Total: R$</label>
+                        <input type="text" name="texto_total" id="campo_total" placeholder="Total a pagar" readonly>
+                    </p>
                 </fieldset>
 
-[BOTÃO ENVIAR]
+                <!--
+                    <input type="submit" value="Enviar">
+                -->
 
+                <input type="image" name="texto_enviar" src="_imagens/botao-enviar.png">
             </form>
         </article>
     </section>
