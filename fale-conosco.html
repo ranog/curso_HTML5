@@ -11,6 +11,7 @@
             href = hypertext reference 
         -->
     <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/contato.css">
 </head>
 
 <script src="_javascript/funcoes.js"></script>
@@ -42,38 +43,107 @@
         </nav>
     </header>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+    <section id="corpo_full">
+        <article id="noticia_principal">
+            <header id="cabecalho_artigo">
+                <hgroup>
+                    <h3>Fale Conosco > Contato</h3>
+                    <h1>Formulário de Contato</h1>
+                    <h2>por Gustavo Guanabara</h2>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+            <form>
+                <fieldset id="usuario">
+                    <legend>Identificação do Usuário</legend>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
+                    <p>
+                        <label for="campo_nome">
+                            Nome:
+                        </label>
+                        <input type="text" name="texto_nome" id="campo_nome" size="20" maxlength="30" placeholder="Nome completo"/>
+                    </p>
+
+                    <p>
+                        <label for="campo_senha">
+                            Senha:
+                        </label>
+                        <input type="password" name="texto_senha" id="campo_senha" size="8" maxlength="8" placeholder="8 dígitos"/>
+                    </p>
+
+                    <p>
+                        <label for="campo_email">
+                            E-mail:
+                        </label> 
+                        <input type="email" name="texto_email" id="campo_email" size="20" maxlength="40">
+                    </p>
+                
+                    <fieldset id="sexo">
+                        <legend>Sexo</legend>
+                        
+                        <input type="radio" name="texto_sexo" id="campo_masculino"/>
+                        <!--
+                            checked - para deixar marcado uma opção, colocar logo depois do ID.
+                        -->
+                            <label for="campo_masculino">
+                                Masculino
+                            </label>
+                        <br/>
+                        <input type="radio" name="texto_sexo" id="campo_feminino"/>
+                            <label for="campo_feminino">
+                                Feminino
+                            </label>
+
+                    </fieldset>
+
+                    <p>
+                        <label for="campo_data">
+                            Data de Nascimento:
+                        </label> 
+                        <input type="date"name="texto_data" id="campo_data"/>
+                    </p>
+                </fieldset>
+
+                <fieldset id="endereco">
+                    <legend>Endereço do Usuário</legend>
+                    <p>
+                        <label for="campo_logradouro">
+                            Logradouro:
+                        </label>
+                        <input type="text" name="texte_logradouro" id="campo_logradouro" size="13" maxlength="80" placeholder="Av, Rua, Travessa, ..."/>
+                    </p>
+    
+                    <p>
+                        <label for="campo_numero">
+                            Número:
+                        </label>
+                        <input type="number" name="texte_numero" id="campo_numero" min="0" max="999999"/>
+                    </p>
     Estado:
     Cidade:
+                </fieldset>
 
-Mensagem do Usuário
+                <fieldset id="mensagem">
+                    <legend>Mensagem do Usuário</legend>
     Grau de Urgência:
     Mensagem:
 
-Quero um Google Glass
+                </fieldset>
+
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
     Gostaria de adquirir um Google Glass quando disponível
     Cor:
     Quantidade:
     Preço Total: R$
-
+                </fieldset>
 
 [BOTÃO ENVIAR]
+
+            </form>
+        </article>
+    </section>
 
     <footer id="rodape">
         <p>Copyright&copy; 2013 - by Gustavo Guanabara</p>
